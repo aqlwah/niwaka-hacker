@@ -1,0 +1,25 @@
+.titlebar {
+  background: white;
+  height: 40px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  line-height: 40px;
+  .icon {
+    padding: 0 0.5rem;
+    line-height: 40px;
+  }
+}
+
+.main {
+  height: calc(100% - 40px);
+  width: 100%;
+  textarea {
+    resize: none;
+    background: black;
+    color: lightgreen;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+  }
+}

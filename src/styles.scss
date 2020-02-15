@@ -1,0 +1,82 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+.fake-dialog {
+  .mat-dialog-container {
+    background: #343434;
+    color: red;
+    position: relative;
+    .log {
+      color: lightgreen;
+    }
+    .accepted {
+      width: 100%;
+      height: 60px;
+      line-height: 60px;
+      margin: 0;
+      background: lightgreen;
+      color: Royalblue;
+      font-size: 2rem;
+      font-weight: bold;
+      text-align: center;
+      position: absolute;
+      top: 3rem;
+      left: 0;
+      animation: blink 0.8s ease-in-out infinite alternate;
+    }
+    .anaryzing {
+      width: 100%;
+      height: 60px;
+      line-height: 60px;
+      margin: 0;
+      background: yellow;
+      font-size: 2rem;
+      font-weight: bold;
+      text-align: center;
+      position: absolute;
+      top: 3rem;
+      left: 0;
+      animation: blink 0.8s ease-in-out infinite alternate;
+    }
+  }
+  .mat-form-field {
+    font-size: 1.5rem;
+    color: yellow;
+    .mat-form-field-wrapper {
+      padding-bottom: 0;
+    }
+    .mat-form-field-infix {
+      // padding-top: 0;
+    }
+    .mat-form-field-outline {
+      color: yellow;
+    }
+    .mat-form-field-label {
+      color: yellow;
+    }
+    &:first-child {
+      margin-right: 10px;
+    }
+    input {
+      letter-spacing: 1rem;
+      font-weight: bold;
+    }
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}

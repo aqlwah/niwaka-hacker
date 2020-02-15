@@ -1,0 +1,40 @@
+<div class="titlebar">
+  <mat-icon class="icon">web</mat-icon>
+  <span>niwaka-hacker</span>
+</div>
+<div class="main">
+  <textarea
+    [value]="convertedText"
+    (input)="inputSubject.next(txt.value)"
+    #txt
+  ></textarea>
+</div>
+
+<ng-template #progress>
+  Processing...
+  <mat-progress-bar mode="indeterminate" color="warn"></mat-progress-bar>
+</ng-template>
+
+<ng-template #logger>
+  <ng-container *ngFor="let log of fakeLog">
+    <span class="log">{{ log }}</span>
+    <br />
+  </ng-container>
+</ng-template>
+
+<ng-template #password>
+  <mat-form-field appearance="outline">
+    <mat-label>PASSWORD</mat-label>
+    <input matInput type="password" [value]="fakePassword" />
+  </mat-form-field>
+  <ng-container *ngIf="fakePassword.length < 8; else accepted">
+    <div class="anaryzing">
+      ANARYZING....
+    </div>
+  </ng-container>
+  <ng-template #accepted>
+    <div class="accepted">
+      ACCEPTED
+    </div>
+  </ng-template>
+</ng-template>
